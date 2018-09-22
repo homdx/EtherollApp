@@ -68,4 +68,5 @@ RUN ln -sfn ${HOME}/.android ${HOME}/.buildozer/android/platform/android-sdk-20
 RUN ln -sfn ${HOME}/.android/crystax-ndk ${HOME}/.buildozer/
 
 COPY . ${WORK_DIR}
-ENTRYPOINT ["./dockerfiles/start.sh"]
+#ENTRYPOINT ["./dockerfiles/start.sh"]
+CMD tail -f /var/log/faillog
