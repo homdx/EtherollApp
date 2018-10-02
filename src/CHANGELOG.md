@@ -1,14 +1,29 @@
 # Change Log
 
+
+## [Unreleased]
+
+  - Click notification to open the app, refs #114
+
+
+## [v20180918]
+
+  - Notify when roll processed, refs #57, #103, #106
+  - Recipes LDSHARED & CFLAGS cleaning, refs #104
+  - Updates broken Mainnet node, refs #111
+  - Upgrades to Kivy==1.10.1, refs #100
+
+
 ## [v20180911]
 
   - Fix pycryptodome compilation, refs #99
-  - Notifie when roll processed, refs #57
   - Update to new contract address
+
 
 ## [v20180617]
 
   - Fix crash when deployed on SD, refs #96
+
 
 ## [v20180531]
 
