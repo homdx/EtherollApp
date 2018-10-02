@@ -50,9 +50,10 @@ USER ${USER}
 WORKDIR ${WORK_DIR}
 
 # downloads and installs CrystaX NDK
-RUN curl --location --progress-bar ${MAKEFILES_URL}/crystax_ndk.mk --output crystax_ndk.mk
+RUN curl --location --progress-bar ${MAKEFILES_URL}/crystax_ndk.mk --output crystax_ndk.mk && \
+    make -f crystax_ndk.mk TAR=`which bsdtar` && \
+    rm crystax-ndk-10.3.2-linux-x86_64.tar.xz
 # using `bsdtar` since `tar` is failing extracting it on Travis
-RUN make -f crystax_ndk.mk TAR=`which bsdtar`
 
 # downloads and installs Android SDK
 RUN curl --location --progress-bar ${MAKEFILES_URL}/android_sdk.mk --output android_sdk.mk
